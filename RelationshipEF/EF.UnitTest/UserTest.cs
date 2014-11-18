@@ -15,7 +15,7 @@ namespace EF.UnitTest
             Database.SetInitializer<EFDbContext>(new CreateDatabaseIfNotExists<EFDbContext>());
             using (var context = new EFDbContext())
             {
-                context.Database.Create();
+                context.Database.CreateIfNotExists();
                 User user = new User
                 {
                     UserName = "ss_shekhawat",
