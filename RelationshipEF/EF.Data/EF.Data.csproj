@@ -47,8 +47,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EFDbContext.cs" />
+    <Compile Include="Mapping\CourseMap.cs" />
     <Compile Include="Mapping\CustomerMap.cs" />
     <Compile Include="Mapping\OrderMap.cs" />
+    <Compile Include="Mapping\StudentMap.cs" />
     <Compile Include="Mapping\UserMap.cs" />
     <Compile Include="Mapping\UserProfileMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

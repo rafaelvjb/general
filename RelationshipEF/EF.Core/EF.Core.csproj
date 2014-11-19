@@ -40,8 +40,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseEntity.cs" />
+    <Compile Include="Data\Course.cs" />
     <Compile Include="Data\Customer.cs" />
     <Compile Include="Data\Order.cs" />
+    <Compile Include="Data\Student.cs" />
     <Compile Include="Data\User.cs" />
     <Compile Include="Data\UserProfile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
