@@ -10,7 +10,7 @@ namespace ExampleCodeFirstApproch.Models
     public class LibraryContext : DbContext
     {
         public LibraryContext()
-            : base("name=DbConnectionSctring")
+            : base("name=DbConnectionString")
         {
         }
 
