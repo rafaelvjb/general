@@ -11,7 +11,7 @@ namespace EF.Data.Migrations
         {
             AutomaticMigrationsEnabled = true;
             AutomaticMigrationDataLossAllowed = false;
-            //ContextKey = "EF.Data.EFDbContext";
+            ContextKey = "EF.Data.EFDbContext";
         }
 
         protected override void Seed(EF.Data.EFDbContext context)
