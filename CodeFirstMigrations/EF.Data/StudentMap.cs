@@ -20,6 +20,7 @@ namespace EF.Data
             Property(t => t.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
             Property(t => t.Name);
             Property(t => t.Age);
+            Property(t => t.IsCurrent); 
 
             //table  
             ToTable("Student");  

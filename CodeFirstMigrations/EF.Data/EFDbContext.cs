@@ -9,6 +9,11 @@ namespace EF.Data
 {
     public class EFDbContext : DbContext
     {
+        static EFDbContext()
+        {
+            Database.SetInitializer<EFDbContext>(null);
+        }
+
         public EFDbContext()
             : base("name=DbConnectionString")
         {

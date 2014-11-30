@@ -11,5 +11,6 @@ namespace EF.Core
         public Int64 Id { get; set; }
         public string Name { get; set; }
         public int Age { get; set; }
+        public bool IsCurrent { get; set; }
     }  
 }

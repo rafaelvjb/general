@@ -47,6 +47,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EFDbContext.cs" />
+    <Compile Include="Migrations\201411301300488_InitialCreate.cs" />
+    <Compile Include="Migrations\201411301300488_InitialCreate.Designer.cs">
+      <DependentUpon>201411301300488_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StudentMap.cs" />
   </ItemGroup>
@@ -59,6 +64,11 @@
       <Project>{9d31dc0a-b41e-4d4f-b0f9-fa6d39b2e22c}</Project>
       <Name>EF.Core</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201411301300488_InitialCreate.resx">
+      <DependentUpon>201411301300488_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
