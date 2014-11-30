@@ -1,0 +1,42 @@
+﻿@model ExampleCodeFirstApproch.Models.Publisher
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Publisher</legend>
+
+        @Html.HiddenFor(model => model.PublisherId)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PublisherName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PublisherName)
+            @Html.ValidationMessageFor(model => model.PublisherName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Address)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Address)
+            @Html.ValidationMessageFor(model => model.Address)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+

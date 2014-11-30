@@ -1,0 +1,29 @@
+﻿@model ExampleCodeFirstApproch.Models.Publisher
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Publisher</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PublisherName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PublisherName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Address)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Address)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.PublisherId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
