@@ -5,15 +5,12 @@ namespace Ioc.Web.App_Start
 {
     using System;
     using System.Web;
-
-    using Microsoft.Web.Infrastructure.DynamicModuleHelper;
-
-    using Ninject;
-    using Ninject.Web.Common;
-
     using Ioc.Core.Data;
     using Ioc.Data;
     using Ioc.Service;
+    using Microsoft.Web.Infrastructure.DynamicModuleHelper;
+    using Ninject;
+    using Ninject.Web.Common;
 
     public static class NinjectWebCommon 
     {
@@ -66,12 +63,8 @@ namespace Ioc.Web.App_Start
         private static void RegisterServices(IKernel kernel)
         {
             kernel.Bind<IDbContext>().To<IocDbContext>().InRequestScope();
-            kernel.Bind(typeof(IRepository<>)).To(typeof(Repository<>)).InRequestScope();
+            kernel.Bind(typeof(IRepository<>)).To(typeof(Repository<>)).InRequestScope();            
             kernel.Bind<IUserService>().To<UserService>();
-
-            //kernel.Bind<IUserService>().To<UserService>();
-
-
         }        
     }
 }

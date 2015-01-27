@@ -3,8 +3,7 @@
 <div class="book-example panel panel-primary">
     <div class="panel-heading panel-head">Users Listing</div>
     <div class="panel-body">
-        <a id="A1" href="@Url.Action("CreateEditUser")"
-           class="btn btn-success">
+        <a id="createEditBookModal" href="@Url.Action("CreateEditUser")" class="btn btn-success">
             <span class="glyphicon glyphicon-plus"></span> User
         </a>
 
@@ -19,17 +18,16 @@
                 <th>
                     @Html.DisplayNameFor(model => model.Address)
                 </th>
-                <th>
-                    Action
+                <th>Action
                 </th>
+
                 <th></th>
             </tr>
             @foreach (var item in Model)
             {
                 <tr>
                     <td>
-                        @Html.DisplayFor(modelItem => item.FirstName)
-                        @Html.DisplayFor(modelItem => item.LastName)
+                        @Html.DisplayFor(modelItem => item.FirstName) @Html.DisplayFor(modelItem=>item.LastName)
                     </td>
                     <td>
                         @Html.DisplayFor(modelItem => item.Email)
@@ -38,15 +36,15 @@
                         @Html.DisplayFor(modelItem => item.Address)
                     </td>
                     <td>
-                        @Html.ActionLink("Edit", "CreateEditUser",
-                        new { id = item.ID }, new { @class = "btn btn-success" })
-                        @Html.ActionLink("Details", "DetailUser",
-                        new { id = item.ID }, new { @class = "btn btn-primary" })
-                        @Html.ActionLink("Delete", "DeleteUser",
-                        new { id = item.ID }, new { @class = "btn btn-danger" })
+                        @Html.ActionLink("Edit", "CreateEditUser", new { id = item.ID }, new { @class = "btn btn-success" })
+                        @Html.ActionLink("Details", "DetailUser", new { id = item.ID }, new { @class = "btn btn-primary" })
+                        @Html.ActionLink("Delete", "DeleteUser", new { id = item.ID }, new { @class = "btn btn-danger" })
                     </td>
                 </tr>
             }
+
         </table>
     </div>
-</div> 
+</div>
+
+

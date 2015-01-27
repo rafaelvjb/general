@@ -48,21 +48,20 @@
                 <div class="col-lg-9">
                     @Html.DisplayFor(model => model.Address, new { @class = "form-control" })
                 </div>
-            </div>
+            </div>           
 
             @using (Html.BeginForm())
             {
                 <div class="form-group">
                     <div class="col-lg-2"></div>
                     <div class="col-lg-9">
-                        @Html.ActionLink("Edit", "CreateEditUser",
-                        new { id = ViewContext.RouteData.Values["id"] },
-                        new { @class = "btn btn-primary" })
-                        @Html.ActionLink("Back to List", "Index",
-                        null, new { @class = "btn btn-success" })
+                        @Html.ActionLink("Edit", "CreateEditUser", new { id = ViewContext.RouteData.Values["id"] }, new { @class = "btn btn-primary" })
+                        @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-success" })
                     </div>
                 </div>
             }
         </div>
     </div>
-</div>   
+</div>
+
+

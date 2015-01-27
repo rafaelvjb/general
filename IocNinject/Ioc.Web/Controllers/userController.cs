@@ -6,22 +6,22 @@ using Ioc.Service;
 using Ioc.Web.Models;
 using Ioc.Core.Data;
 
-
 namespace Ioc.Web.Controllers
 {
     public class UserController : Controller
     {
-        private IUserService _userService;
-        public UserController(UserService userService)
-        {
-            this._userService = userService;
-        }
 
+        private IUserService userService;
+
+        public UserController(IUserService userService)
+        {
+            this.userService = userService;
+        }
 
         [HttpGet]
         public ActionResult Index()
         {
-            IEnumerable<UserModel> users = _userService.GetUsers().Select(u => new UserModel
+            IEnumerable<UserModel> users = userService.GetUsers().Select(u => new UserModel
             {
                 FirstName = u.UserProfile.FirstName,
                 LastName = u.UserProfile.LastName,
@@ -38,7 +38,7 @@ namespace Ioc.Web.Controllers
             UserModel model = new UserModel();
             if (id.HasValue && id != 0)
             {
-                User userEntity = _userService.GetUser(id.Value);
+                User userEntity = userService.GetUser(id.Value);
                 model.FirstName = userEntity.UserProfile.FirstName;
                 model.LastName = userEntity.UserProfile.LastName;
                 model.Address = userEntity.UserProfile.Address;
@@ -62,7 +62,7 @@ namespace Ioc.Web.Controllers
                     AddedDate = DateTime.UtcNow,
                     ModifiedDate = DateTime.UtcNow,
                     IP = Request.UserHostAddress,
-                    UserProfile = new Ioc.Core.Data.UserProfile
+                    UserProfile = new UserProfile
                     {
                         FirstName = model.FirstName,
                         LastName = model.LastName,
@@ -72,7 +72,7 @@ namespace Ioc.Web.Controllers
                         IP = Request.UserHostAddress
                     }
                 };
-                _userService.InsertUser(userEntity);
+                userService.InsertUser(userEntity);
                 if (userEntity.ID > 0)
                 {
                     return RedirectToAction("index");
@@ -80,8 +80,7 @@ namespace Ioc.Web.Controllers
             }
             else
             {
-                User userEntity = _userService.GetUser(model.ID);
-              
+                User userEntity = userService.GetUser(model.ID);
                 userEntity.UserName = model.UserName;
                 userEntity.Email = model.Email;
                 userEntity.Password = model.Password;
@@ -92,25 +91,23 @@ namespace Ioc.Web.Controllers
                 userEntity.UserProfile.Address = model.Address;
                 userEntity.UserProfile.ModifiedDate = DateTime.UtcNow;
                 userEntity.UserProfile.IP = Request.UserHostAddress;
-                
-                _userService.UpdateUser(userEntity);
+                userService.UpdateUser(userEntity);
                 if (userEntity.ID > 0)
                 {
                     return RedirectToAction("index");
                 }
-
+               
             }
             return View(model);
         }
-
 
         public ActionResult DetailUser(int? id)
         {
             UserModel model = new UserModel();
             if (id.HasValue && id != 0)
             {
-                User userEntity = _userService.GetUser(id.Value);
-                // model.ID = userEntity.ID;
+                User userEntity = userService.GetUser(id.Value);
+               // model.ID = userEntity.ID;
                 model.FirstName = userEntity.UserProfile.FirstName;
                 model.LastName = userEntity.UserProfile.LastName;
                 model.Address = userEntity.UserProfile.Address;
@@ -126,7 +123,7 @@ namespace Ioc.Web.Controllers
             UserModel model = new UserModel();
             if (id != 0)
             {
-                User userEntity = _userService.GetUser(id);
+                User userEntity = userService.GetUser(id);                
                 model.FirstName = userEntity.UserProfile.FirstName;
                 model.LastName = userEntity.UserProfile.LastName;
                 model.Address = userEntity.UserProfile.Address;
@@ -137,15 +134,16 @@ namespace Ioc.Web.Controllers
             return View(model);
         }
 
+       
         [HttpPost]
         public ActionResult DeleteUser(int id, FormCollection collection)
         {
             try
             {
-                if (id != 0)
+                if ( id != 0)
                 {
-                    User userEntity = _userService.GetUser(id);
-                    _userService.DeleteUser(userEntity);
+                    User userEntity = userService.GetUser(id);    
+                    userService.DeleteUser(userEntity);
                     return RedirectToAction("Index");
                 }
                 return View();
