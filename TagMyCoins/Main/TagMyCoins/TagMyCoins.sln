@@ -1,0 +1,106 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 - Presentation", "0 - Presentation", "{0646BDFA-C09B-473F-AAD8-A6B9D2FFF1C6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Services", "1 - Services", "{39ED69F5-3E43-4070-A8DA-11A7107B064A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Application", "2 - Application", "{4C78BCD3-B44E-4A1E-9E67-3C2D07B223AE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Domain", "3 - Domain", "{02574650-83A6-432D-BD63-CC9CA1CA810C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Infra", "4 - Infra", "{D0273A91-3FA1-406D-BDE6-4410C776D51B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.1 - Data", "4.1 - Data", "{91082B82-B649-42DB-AEFD-58ECB72E07E4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.2 - CrossCutting", "4.2 - CrossCutting", "{86A1FB2F-272F-478B-9DDA-220F44F6B274}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TagMyCoins.Domain", "src\TagMyCoins.Domain\TagMyCoins.Domain.csproj", "{602B776A-73CB-42BB-A4A6-80DCA2D7BABB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TagMyCoins.Infra.Data", "src\TagMyCoins.Infra.Data\TagMyCoins.Infra.Data.csproj", "{1AAA2E37-1DE0-4C11-B137-FBAD0411633D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TagMyCoins.Application", "src\TagMyCoins.Application\TagMyCoins.Application.csproj", "{F94CB5F5-B3D4-4382-BE55-24D0D2443D30}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TagMyCoins.UI.MVC", "src\TagMyCoins.UI.MVC\TagMyCoins.UI.MVC.csproj", "{4BE58D24-0ED4-4722-81AD-6438AE848D34}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TagMyCoins.Infra.CrossCutting.Identity", "src\TagMyCoins.Infra.CrossCutting.Identity\TagMyCoins.Infra.CrossCutting.Identity.csproj", "{D0314754-950A-42EB-A312-AF2ACDEDCFC1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TagMyCoins.Infra.CrossCutting.MVCFIlters", "src\TagMyCoins.Infra.CrossCutting.MVCFIlters\TagMyCoins.Infra.CrossCutting.MVCFIlters.csproj", "{C92B8992-20F1-47C9-9809-0502F1995B5F}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 7
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://rafaelvjb.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = src\\TagMyCoins.Domain\\TagMyCoins.Domain.csproj
+		SccProjectTopLevelParentUniqueName1 = TagMyCoins.sln
+		SccProjectName1 = src/TagMyCoins.Domain
+		SccLocalPath1 = src\\TagMyCoins.Domain
+		SccProjectUniqueName2 = src\\TagMyCoins.Infra.Data\\TagMyCoins.Infra.Data.csproj
+		SccProjectTopLevelParentUniqueName2 = TagMyCoins.sln
+		SccProjectName2 = src/TagMyCoins.Infra.Data
+		SccLocalPath2 = src\\TagMyCoins.Infra.Data
+		SccProjectUniqueName3 = src\\TagMyCoins.Application\\TagMyCoins.Application.csproj
+		SccProjectTopLevelParentUniqueName3 = TagMyCoins.sln
+		SccProjectName3 = src/TagMyCoins.Application
+		SccLocalPath3 = src\\TagMyCoins.Application
+		SccProjectUniqueName4 = src\\TagMyCoins.UI.MVC\\TagMyCoins.UI.MVC.csproj
+		SccProjectTopLevelParentUniqueName4 = TagMyCoins.sln
+		SccProjectName4 = src/TagMyCoins.UI.MVC
+		SccLocalPath4 = src\\TagMyCoins.UI.MVC
+		SccProjectUniqueName5 = src\\TagMyCoins.Infra.CrossCutting.Identity\\TagMyCoins.Infra.CrossCutting.Identity.csproj
+		SccProjectTopLevelParentUniqueName5 = TagMyCoins.sln
+		SccProjectName5 = src/TagMyCoins.Infra.CrossCutting.Identity
+		SccLocalPath5 = src\\TagMyCoins.Infra.CrossCutting.Identity
+		SccProjectUniqueName6 = src\\TagMyCoins.Infra.CrossCutting.MVCFIlters\\TagMyCoins.Infra.CrossCutting.MVCFIlters.csproj
+		SccProjectTopLevelParentUniqueName6 = TagMyCoins.sln
+		SccProjectName6 = src/TagMyCoins.Infra.CrossCutting.MVCFIlters
+		SccLocalPath6 = src\\TagMyCoins.Infra.CrossCutting.MVCFIlters
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{602B776A-73CB-42BB-A4A6-80DCA2D7BABB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{602B776A-73CB-42BB-A4A6-80DCA2D7BABB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{602B776A-73CB-42BB-A4A6-80DCA2D7BABB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{602B776A-73CB-42BB-A4A6-80DCA2D7BABB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AAA2E37-1DE0-4C11-B137-FBAD0411633D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AAA2E37-1DE0-4C11-B137-FBAD0411633D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AAA2E37-1DE0-4C11-B137-FBAD0411633D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AAA2E37-1DE0-4C11-B137-FBAD0411633D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F94CB5F5-B3D4-4382-BE55-24D0D2443D30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F94CB5F5-B3D4-4382-BE55-24D0D2443D30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F94CB5F5-B3D4-4382-BE55-24D0D2443D30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F94CB5F5-B3D4-4382-BE55-24D0D2443D30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BE58D24-0ED4-4722-81AD-6438AE848D34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BE58D24-0ED4-4722-81AD-6438AE848D34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BE58D24-0ED4-4722-81AD-6438AE848D34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BE58D24-0ED4-4722-81AD-6438AE848D34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0314754-950A-42EB-A312-AF2ACDEDCFC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0314754-950A-42EB-A312-AF2ACDEDCFC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0314754-950A-42EB-A312-AF2ACDEDCFC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0314754-950A-42EB-A312-AF2ACDEDCFC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C92B8992-20F1-47C9-9809-0502F1995B5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C92B8992-20F1-47C9-9809-0502F1995B5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C92B8992-20F1-47C9-9809-0502F1995B5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C92B8992-20F1-47C9-9809-0502F1995B5F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{91082B82-B649-42DB-AEFD-58ECB72E07E4} = {D0273A91-3FA1-406D-BDE6-4410C776D51B}
+		{86A1FB2F-272F-478B-9DDA-220F44F6B274} = {D0273A91-3FA1-406D-BDE6-4410C776D51B}
+		{602B776A-73CB-42BB-A4A6-80DCA2D7BABB} = {02574650-83A6-432D-BD63-CC9CA1CA810C}
+		{1AAA2E37-1DE0-4C11-B137-FBAD0411633D} = {91082B82-B649-42DB-AEFD-58ECB72E07E4}
+		{F94CB5F5-B3D4-4382-BE55-24D0D2443D30} = {4C78BCD3-B44E-4A1E-9E67-3C2D07B223AE}
+		{4BE58D24-0ED4-4722-81AD-6438AE848D34} = {0646BDFA-C09B-473F-AAD8-A6B9D2FFF1C6}
+		{D0314754-950A-42EB-A312-AF2ACDEDCFC1} = {86A1FB2F-272F-478B-9DDA-220F44F6B274}
+		{C92B8992-20F1-47C9-9809-0502F1995B5F} = {86A1FB2F-272F-478B-9DDA-220F44F6B274}
+	EndGlobalSection
+EndGlobal
